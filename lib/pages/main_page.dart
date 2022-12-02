@@ -25,9 +25,24 @@ class _MainPageState extends State<MainPage>
     super.initState();
   }
 
+  List pages = const [
+    HomePage(),
+    ShoppingCartPage(),
+    AccountPage(),
+    NotificationsPage(),
+  ];
+
+  int currentIndex = 0;
+  void onTap(int index) {
+    setState(() {
+      currentIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: pages[currentIndex],
       bottomNavigationBar: Material(
         color: CustomColors.customPrimaryColor,
         child: TabBar(
@@ -41,7 +56,7 @@ class _MainPageState extends State<MainPage>
                 BorderSide(color: CustomColors.customOrange, width: 4.0),
             insets: EdgeInsets.fromLTRB(60.0, 20.0, 60.0, 20.0),
           ),
-          onTap: (index) {},
+          onTap: onTap,
           tabs: const [
             Tab(icon: Icon(Icons.home)),
             Tab(icon: Icon(Icons.shopping_cart)),
