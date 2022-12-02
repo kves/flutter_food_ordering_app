@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_food_ordering_app/pages/main_page.dart';
 import 'package:flutter_food_ordering_app/theme/colors.dart';
 
 import '../pages/home_page.dart';
@@ -17,8 +18,7 @@ class WelcomeScreen extends StatelessWidget {
       backgroundColor: CustomColors.customPrimaryColor,
       body: Column(
         children: [
-          // burger image
-
+          // burger image with shadows
           Stack(
             children: [
               Opacity(
@@ -53,7 +53,7 @@ class WelcomeScreen extends StatelessWidget {
             ],
           ),
 
-          //texts container
+          //bottom texts container
           Container(
             decoration: BoxDecoration(
                 borderRadius: const BorderRadius.only(
@@ -109,7 +109,7 @@ class WelcomeScreen extends StatelessWidget {
                 GestureDetector(
                   onTap: () => Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: ((context) {
-                    return const HomePage();
+                    return const MainPage();
                   }))),
                   child: Container(
                     padding: const EdgeInsets.only(
