@@ -31,13 +31,13 @@ class OfferWidget extends StatelessWidget {
               Column(
                 children: [
                   Container(
-                    width: 140,
+                    width: 170,
                     height: 50,
                     decoration: const BoxDecoration(
                       color: CustomColors.customOrange,
                       borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(46),
-                          bottomRight: Radius.circular(46)),
+                          topLeft: Radius.circular(36),
+                          bottomRight: Radius.circular(36)),
                     ),
                     child: const Center(
                       child: Text(
